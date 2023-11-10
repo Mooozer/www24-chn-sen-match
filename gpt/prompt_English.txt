@@ -1,0 +1,24 @@
+I will present two Chinese sentences, query and title, and request the following tasks: (1) Determine whether the meanings of these two sentences are similar or dissimilar, outputting 1 for similarity and 0 for dissimilarity. (2) Identify the tokens that form the basis of your judgment, providing two lists containing the indexes of the selected tokens from the query and title. These lists need not maintain the original order of tokens but should reflect their importance for judgment, arranged from strongest to weakest. Please provide the output directly in the specified format, as demonstrated in the examples below.
+
+Example 1:
+Input:
+{"id": 10, "query": “举头望明月的下一句是什么来着？忘了”, "title": “举头望明月下一句”, "text_q_seg": [‘举’, ‘头’, ‘望’, ‘明’, ‘月’, ‘的’, ‘下’, ‘一’, ‘句’, ‘是’, ‘什’, ‘么’, ‘来’, ‘着’, ‘？’, ‘忘’, ‘了’], "text_t_seg": [‘举’, ‘头’, ‘望’, ‘明’, ‘月’, ‘下’, ‘一’, ‘句’]}
+Output:
+{"id": 10, "label": 1, "rationale": [[0,1,2,3,4,6,8], [0,1,2,3,4,5,7]]}
+Explanation:
+The query and title have a similar meaning, so the label is 1. 
+The important tokens in the query for judgment of similarity are [‘举’, ‘头’, ‘望’, ‘明’, ‘月’, ‘下’, ‘句’], the corresponding indexes of text_q_seg are [0,1,2,3,4,6,8]. 
+The important tokens in the title for judgment of similarity are [‘举’, ‘头’, ‘望’, ‘明’, ‘月’, ‘下’, ‘句’], the corresponding indexes of text_t_seg are [0,1,2,3,4,5,7]. 
+
+Example 2:
+Input:
+{"id": 23, "query": "抗风弱的植物", "title": "抗风的植物", "text_q_seg": [’抗’, ’风’, ’弱’, ’的’, ’植’, ’物’], "text_t_seg": [’抗’, ’风’, ’的’, ’植’, ’物’]}
+Output:
+{"id": 23, "label": 0, "rationale": [[0,1,2,4,5], [0,1,3,4]]}
+Explanation:
+The query and title have dissimilar meanings, so the label is 0. 
+The important tokens in the query for judgment of dissimilarity are [’抗’, ’风’, ’弱’, ’植’, ’物’], the corresponding indexes of text_q_seg are [0,1,2,4,5].
+The important tokens in the title for judgment of dissimilarity are [’抗’, ’风’, ’植’, ’物’], the corresponding indexes of text_t_seg are [0,1,3,4].
+
+Ensure that your response strictly adheres to this specified Output format, with one line per output only, no explanation is needed, especially when dealing with multiple pieces of data.
+If you understand, we will start the test. Please respond with either 'I understand' or 'I don't understand'.
