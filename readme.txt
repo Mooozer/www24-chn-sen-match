@@ -23,4 +23,4 @@ import math
 baidu_stopwords.txt: https://github.com/goto456/stopwords
 
 
-<img src="framework.gif" width="700" height="380"/>
+<img src="framework.jpg" width="700" height="380"/>
