@@ -24,6 +24,8 @@ baidu_stopwords.txt: https://github.com/goto456/stopwords
 
 ![xingzhi](https://github.com/Mooozer/www24-chn-sen-match/blob/main/framework.jpg?raw=true)
 
+Acknowledgments
+
 Our original approaches, developed by Muzhe Guo and Muhao Guo, have achieved top honors in the "Ingenuity Cup" National Artificial Intelligence Innovation Application Competition. 
 We wish to express our sincere appreciation to the organizers, China Academy of Information and Communications Technology, and the Institute of Scientific and Technical Information of China. We also wish to express our sincere appreciation to the "Ingenuity Cup" organizing committee and event organizers for their recognition and support.
 
